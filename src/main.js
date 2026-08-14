@@ -212,12 +212,12 @@ document.addEventListener('DOMContentLoaded', () => {
     expandGalleryBtn.addEventListener('click', () => {
       isGalleryExpanded = !isGalleryExpanded;
       if (isGalleryExpanded) {
-        extraPhotos.forEach(photo => {
+        extraPhotos.forEach((photo, index) => {
           photo.classList.remove('hidden');
-          // small delay for reveal animation to trigger nicely
+          // stagger the reveal animation based on index
           setTimeout(() => {
             photo.classList.add('active');
-          }, 50);
+          }, 50 + (index * 100)); // 100ms stagger per photo
         });
         expandGalleryBtn.textContent = 'Show Less';
       } else {
