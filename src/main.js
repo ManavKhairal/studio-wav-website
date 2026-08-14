@@ -179,20 +179,27 @@ document.addEventListener('DOMContentLoaded', () => {
       lightboxImg.src = img.src;
       lightbox.classList.remove('hidden');
       lightbox.classList.add('flex');
+      
+      // Small delay to allow display:flex to apply before animating opacity
       setTimeout(() => {
-        lightboxImg.classList.remove('scale-95');
-        lightboxImg.classList.add('scale-100');
+        lightbox.classList.remove('opacity-0');
+        lightbox.classList.add('opacity-100');
+        lightboxImg.classList.remove('scale-95', 'opacity-0');
+        lightboxImg.classList.add('scale-100', 'opacity-100');
       }, 50);
     });
   });
 
   const closeLightbox = () => {
-    lightboxImg.classList.remove('scale-100');
-    lightboxImg.classList.add('scale-95');
+    lightbox.classList.remove('opacity-100');
+    lightbox.classList.add('opacity-0');
+    lightboxImg.classList.remove('scale-100', 'opacity-100');
+    lightboxImg.classList.add('scale-95', 'opacity-0');
+    
     setTimeout(() => {
       lightbox.classList.add('hidden');
       lightbox.classList.remove('flex');
-    }, 300);
+    }, 500); // match the duration-500 transition
   };
 
   lightboxClose.addEventListener('click', closeLightbox);
@@ -217,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // stagger the reveal animation based on index
           setTimeout(() => {
             photo.classList.add('active');
-          }, 50 + (index * 100)); // 100ms stagger per photo
+          }, 50 + (index * 250)); // Slower 250ms stagger per photo
         });
         expandGalleryBtn.textContent = 'Show Less';
       } else {
