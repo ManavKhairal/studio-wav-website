@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-studio-black text-white font-sans antialiased selection:bg-studio-purple selection:text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-studio-purple hover:bg-studio-purple-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(109,40,217,0.5)] hover:shadow-[0_0_25px_rgba(109,40,217,0.8)] transform hover:-translate-y-1;
+  }
+  .btn-secondary {
+    @apply px-8 py-3 bg-transparent border-2 border-white/20 hover:border-white text-white font-semibold rounded-full transition-all duration-300 hover:bg-white/5 transform hover:-translate-y-1;
+  }
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 transition-all duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)];
+  }
+}
+
+/* Custom Pre-loader */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Audio Player Range Input Customization */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #6d28d9;
+  cursor: pointer;
+  margin-top: -6px;
+  box-shadow: 0 0 10px rgba(109, 40, 217, 0.8);
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+/* Scroll Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

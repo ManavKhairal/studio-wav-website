@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Studio.wav - Premium Music Recording Studio in Safdarjung Enclave, New Delhi." />
+  <title>Studio.wav | Premium Recording Studio</title>
+  <link rel="icon" type="image/png" href="/Logo.png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <link href="/src/style.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-studio-black text-white relative">
+  
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="flex flex-col items-center">
+      <div class="flex gap-1 items-end h-12 mb-4">
+        <div class="w-2 bg-studio-purple rounded-full animate-[bounce_1s_infinite_0.1s]"></div>
+        <div class="w-2 bg-studio-purple rounded-full animate-[bounce_1s_infinite_0.2s]" style="height: 150%;"></div>
+        <div class="w-2 bg-studio-purple rounded-full animate-[bounce_1s_infinite_0.3s]" style="height: 200%;"></div>
+        <div class="w-2 bg-studio-purple rounded-full animate-[bounce_1s_infinite_0.4s]" style="height: 150%;"></div>
+        <div class="w-2 bg-studio-purple rounded-full animate-[bounce_1s_infinite_0.5s]"></div>
+      </div>
+      <p class="font-outfit tracking-widest text-sm text-white/70 uppercase">Loading Studio.wav</p>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#" class="z-50">
+        <img src="/Logo.png" alt="Studio.wav Logo" class="h-10 lg:h-12 object-contain filter invert" />
+      </a>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-8 font-semibold text-sm tracking-wide">
+        <a href="#about" class="hover:text-studio-purple transition-colors">About</a>
+        <a href="#services" class="hover:text-studio-purple transition-colors">Services</a>
+        <a href="#gallery" class="hover:text-studio-purple transition-colors">Gallery & Audio</a>
+        <a href="#contact" class="btn-primary py-2 px-6">Book Session</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden z-50 text-white text-3xl">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-studio-black/95 backdrop-blur-xl flex-col items-center justify-center gap-8 text-2xl font-outfit font-semibold opacity-0 pointer-events-none transition-all duration-300 flex z-40">
+      <a href="#about" class="mobile-link hover:text-studio-purple">About</a>
+      <a href="#services" class="mobile-link hover:text-studio-purple">Services</a>
+      <a href="#gallery" class="mobile-link hover:text-studio-purple">Gallery</a>
+      <a href="#contact" class="mobile-link text-studio-purple">Book Session</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop" alt="Recording Studio" class="w-full h-full object-cover opacity-40 scale-105 animate-[pulse_20s_infinite_alternate]" />
+      <div class="absolute inset-0 bg-gradient-to-b from-studio-black/80 via-transparent to-studio-black"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+      <h2 class="text-studio-purple font-outfit font-bold tracking-widest uppercase mb-4 text-sm md:text-lg reveal">Studio.wav</h2>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black font-outfit tracking-tighter leading-tight mb-6 reveal" style="transition-delay: 100ms;">
+        WE ARE BEST IN <br class="hidden md:block"/> THE BUSINESS
+      </h1>
+      <p class="text-lg md:text-xl text-white/80 font-light mb-10 max-w-2xl mx-auto reveal" style="transition-delay: 200ms;">
+        Elevate your sound in New Delhi's premier creative space. Industry-standard acoustics meets artistic vision.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal" style="transition-delay: 300ms;">
+        <a href="#contact" class="btn-primary w-full sm:w-auto">Book a Session</a>
+        <a href="#about" class="btn-secondary w-full sm:w-auto">Discover More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6 lg:px-12 bg-studio-black relative">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
+      <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-studio-purple blur-[150px]"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div class="reveal">
+        <h3 class="text-studio-purple font-outfit font-bold tracking-widest uppercase mb-2">The Studio</h3>
+        <h2 class="text-4xl md:text-5xl font-bold font-outfit mb-6">Where Creativity<br/>Meets Fidelity</h2>
+        <div class="space-y-4 text-white/70 leading-relaxed text-lg">
+          <p>
+            Located in the heart of <strong>Safdarjung Enclave, New Delhi</strong>, Studio.wav is a sanctuary for artists, producers, and creators. We don't just record music; we sculpt sonic landscapes that resonate with emotion and clarity.
+          </p>
+          <p>
+            Our acoustically treated rooms and state-of-the-art analog/digital hybrid workflow ensure your vision is captured flawlessly. 
+          </p>
+          <p>
+            Trusted by industry heavyweights, we've had the privilege of collaborating with notable artists like <strong>Samayak Prasana</strong> and <strong>Taimour Baig</strong>. Whether you're cutting your first demo or finalizing a chart-topping album, Studio.wav delivers an uncompromising, premium experience.
+          </p>
+        </div>
+      </div>
+      <div class="relative reveal" style="transition-delay: 200ms;">
+        <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=1000&auto=format&fit=crop" alt="Mixing Console" class="rounded-2xl shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700" />
+        <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-studio-purple rounded-2xl z-0"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 px-6 lg:px-12 bg-studio-dark relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <h3 class="text-studio-purple font-outfit font-bold tracking-widest uppercase mb-2">Our Expertise</h3>
+        <h2 class="text-4xl md:text-5xl font-bold font-outfit">Core Services</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service 1 -->
+        <div class="glass-card reveal">
+          <div class="w-14 h-14 rounded-full bg-studio-purple/20 flex items-center justify-center text-studio-purple text-3xl mb-6">
+            <i class="ph ph-microphone-stage"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Vocal Recording</h4>
+          <p class="text-white/60 text-sm leading-relaxed">Pristine vocal chains featuring legendary microphones and preamps to capture every nuance of your performance.</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="glass-card reveal" style="transition-delay: 100ms;">
+          <div class="w-14 h-14 rounded-full bg-studio-purple/20 flex items-center justify-center text-studio-purple text-3xl mb-6">
+            <i class="ph ph-waveform"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Music Production</h4>
+          <p class="text-white/60 text-sm leading-relaxed">From beat-making to full orchestration, our in-house producers help translate your ideas into radio-ready tracks.</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="glass-card reveal" style="transition-delay: 200ms;">
+          <div class="w-14 h-14 rounded-full bg-studio-red/20 flex items-center justify-center text-studio-red text-3xl mb-6">
+            <i class="ph ph-sliders-horizontal"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Mix & Master</h4>
+          <p class="text-white/60 text-sm leading-relaxed">Achieve the ultimate polish, depth, and loudness required to compete on modern streaming platforms.</p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="glass-card reveal" style="transition-delay: 300ms;">
+          <div class="w-14 h-14 rounded-full bg-studio-purple/20 flex items-center justify-center text-studio-purple text-3xl mb-6">
+            <i class="ph ph-guitars"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Instrument Recording</h4>
+          <p class="text-white/60 text-sm leading-relaxed">Perfectly mic'd live rooms for drums, guitars, strings, and grand piano. Real instruments, real tone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Offer Banner -->
+  <section class="relative py-20 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-studio-purple to-studio-red opacity-90 z-0"></div>
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 z-0"></div>
+    
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center reveal">
+      <div class="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-sm font-bold tracking-widest uppercase mb-4 border border-white/30">
+        Limited Time Offer
+      </div>
+      <h2 class="text-3xl md:text-5xl font-black font-outfit mb-6">Free Vocal Recording Session</h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Book a complete Music Production or Mixing/Mastering package and get your vocal tracking session completely free.
+      </p>
+      <a href="#contact" class="inline-block bg-white text-studio-black font-bold px-10 py-4 rounded-full hover:bg-gray-200 transition-all transform hover:scale-105 shadow-xl">
+        Claim Offer Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Gallery & Audio Section -->
+  <section id="gallery" class="py-24 px-6 lg:px-12 bg-studio-black relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+        <div>
+          <h3 class="text-studio-purple font-outfit font-bold tracking-widest uppercase mb-2">Portfolio</h3>
+          <h2 class="text-4xl md:text-5xl font-bold font-outfit">Vibe & Sound</h2>
+        </div>
+        <p class="text-white/50 max-w-sm mt-4 md:mt-0">A glimpse into our creative process and the artists who trust Studio.wav.</p>
+      </div>
+      
+      <!-- Masonry Gallery -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        <div class="col-span-2 row-span-2 rounded-xl overflow-hidden group reveal">
+          <img src="/images/artist/IMG_0731.JPG" alt="Artist Session" class="w-full h-full object-cover aspect-square md:aspect-auto transform group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="rounded-xl overflow-hidden group reveal" style="transition-delay: 100ms;">
+          <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?q=80&w=600&auto=format&fit=crop" alt="Studio Gear" class="w-full h-full object-cover aspect-square transform group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="rounded-xl overflow-hidden group reveal" style="transition-delay: 200ms;">
+          <img src="/images/artist/044A8521-A253-4391-9A82-F423BDA18B98.jpg" alt="Artist in booth" class="w-full h-full object-cover aspect-square transform group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="rounded-xl overflow-hidden group reveal" style="transition-delay: 300ms;">
+          <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=600&auto=format&fit=crop" alt="Microphone" class="w-full h-full object-cover aspect-square transform group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="rounded-xl overflow-hidden group reveal" style="transition-delay: 400ms;">
+          <img src="/images/artist/IMG_0793.JPG" alt="Artist portrait" class="w-full h-full object-cover aspect-square transform group-hover:scale-110 transition-transform duration-700" />
+        </div>
+      </div>
+
+      <!-- Custom Audio Player -->
+      <div class="glass-card max-w-3xl mx-auto reveal p-8">
+        <div class="text-center mb-6">
+          <h4 class="text-2xl font-bold">Listen to our Work</h4>
+          <p class="text-white/60 text-sm">Sample Track - Mixed & Mastered at Studio.wav</p>
+        </div>
+        
+        <div class="flex items-center gap-6">
+          <button id="play-btn" class="w-16 h-16 shrink-0 rounded-full bg-studio-purple flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform shadow-[0_0_15px_rgba(109,40,217,0.5)]">
+            <i class="ph-fill ph-play" id="play-icon"></i>
+          </button>
+          
+          <div class="flex-1">
+            <div class="flex justify-between text-xs font-semibold text-white/70 mb-2">
+              <span id="current-time">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+            <input type="range" id="seek-bar" value="0" class="w-full" />
+          </div>
+        </div>
+        <!-- Using a free placeholder audio from a reliable source -->
+        <audio id="audio-track" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="metadata"></audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-24 px-6 lg:px-12 bg-studio-dark relative overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <h3 class="text-studio-purple font-outfit font-bold tracking-widest uppercase mb-2">Testimonials</h3>
+        <h2 class="text-4xl md:text-5xl font-bold font-outfit">What Artists Say</h2>
+      </div>
+
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Carousel Container -->
+        <div class="overflow-hidden relative h-64 md:h-48">
+          <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out">
+            <!-- Review 1 -->
+            <div class="w-full shrink-0 px-4 text-center">
+              <p class="text-xl md:text-2xl italic font-light leading-relaxed mb-6">"The vibe at Studio.wav is unmatched. They perfectly captured the emotion of my track and the final master sounds huge on all platforms."</p>
+              <div class="flex items-center justify-center gap-1 text-studio-purple mb-2">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+              <h4 class="font-bold tracking-wide">Karan S.</h4>
+              <p class="text-sm text-white/50">Indie Pop Artist</p>
+            </div>
+            <!-- Review 2 -->
+            <div class="w-full shrink-0 px-4 text-center">
+              <p class="text-xl md:text-2xl italic font-light leading-relaxed mb-6">"As a producer, finding a studio with proper acoustic treatment and gear is rare. Studio.wav is my go-to spot in Delhi now."</p>
+              <div class="flex items-center justify-center gap-1 text-studio-purple mb-2">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+              <h4 class="font-bold tracking-wide">Rahul M.</h4>
+              <p class="text-sm text-white/50">Music Producer</p>
+            </div>
+            <!-- Review 3 -->
+            <div class="w-full shrink-0 px-4 text-center">
+              <p class="text-xl md:text-2xl italic font-light leading-relaxed mb-6">"Professionalism at its peak. The vocal chains here are incredible, and the engineers really know how to make you comfortable."</p>
+              <div class="flex items-center justify-center gap-1 text-studio-purple mb-2">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+              <h4 class="font-bold tracking-wide">Aisha R.</h4>
+              <p class="text-sm text-white/50">Singer / Songwriter</p>
+            </div>
+          </div>
+        </div>
+        <!-- Dots -->
+        <div class="flex justify-center gap-2 mt-8" id="carousel-dots">
+          <button class="w-3 h-3 rounded-full bg-studio-purple transition-all dot-active"></button>
+          <button class="w-3 h-3 rounded-full bg-white/20 transition-all"></button>
+          <button class="w-3 h-3 rounded-full bg-white/20 transition-all"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Booking Section -->
+  <section id="contact" class="py-24 px-6 lg:px-12 bg-studio-black relative">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+      
+      <!-- Contact Info & Form -->
+      <div class="reveal">
+        <h3 class="text-studio-purple font-outfit font-bold tracking-widest uppercase mb-2">Get in Touch</h3>
+        <h2 class="text-4xl md:text-5xl font-bold font-outfit mb-8">Book Your Session</h2>
+        
+        <div class="flex flex-col gap-6 mb-10">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl text-studio-purple"><i class="ph ph-phone"></i></div>
+            <div>
+              <p class="text-sm text-white/50">Call / WhatsApp</p>
+              <a href="tel:9958340671" class="font-bold text-lg hover:text-studio-purple transition">9958340671</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl text-studio-purple"><i class="ph ph-envelope"></i></div>
+            <div>
+              <p class="text-sm text-white/50">Email</p>
+              <a href="mailto:rajneeshrana303@gmail.com" class="font-bold hover:text-studio-purple transition">rajneeshrana303@gmail.com</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl text-studio-purple"><i class="ph ph-instagram-logo"></i></div>
+            <div>
+              <p class="text-sm text-white/50">Instagram</p>
+              <a href="https://www.instagram.com/iamrajneeshrana?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="font-bold hover:text-studio-purple transition">@studio.wav</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Booking request sent successfully!');">
+          <div class="grid grid-cols-2 gap-4">
+            <input type="text" placeholder="Name" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition" />
+            <input type="tel" placeholder="Phone" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition" />
+          </div>
+          <input type="email" placeholder="Email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition" />
+          <select class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition text-white/70 appearance-none">
+            <option value="" disabled selected>Service Interested In</option>
+            <option value="vocal">Vocal Recording</option>
+            <option value="production">Music Production</option>
+            <option value="mix">Mix & Master</option>
+            <option value="instruments">Instrument Recording</option>
+          </select>
+          <textarea rows="4" placeholder="Tell us about your project..." class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition"></textarea>
+          <button type="submit" class="btn-primary w-full">Send Request</button>
+        </form>
+      </div>
+
+      <!-- Map -->
+      <div class="reveal rounded-2xl overflow-hidden border border-white/10 h-[400px] lg:h-auto" style="transition-delay: 200ms;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.917540209594!2d77.19163275!3d28.5606676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce270f2142171%3A0x6fb8747dd9c41df3!2sSafdarjung%20Enclave%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-studio-dark py-8 text-center border-t border-white/5">
+    <p class="text-white/40 text-sm">&copy; 2024 Studio.wav. All rights reserved.</p>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919958340671" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white text-3xl shadow-[0_5px_20px_rgba(34,197,94,0.5)] hover:scale-110 transition-transform z-50">
+    <i class="ph-fill ph-whatsapp-logo"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
