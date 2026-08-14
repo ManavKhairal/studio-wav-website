@@ -202,3 +202,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
+  // --- Expand Gallery Logic ---
+  const expandGalleryBtn = document.getElementById('expand-gallery-btn');
+  const extraPhotos = document.querySelectorAll('.extra-photo');
+  let isGalleryExpanded = false;
+
+  if (expandGalleryBtn) {
+    expandGalleryBtn.addEventListener('click', () => {
+      isGalleryExpanded = !isGalleryExpanded;
+      if (isGalleryExpanded) {
+        extraPhotos.forEach(photo => {
+          photo.classList.remove('hidden');
+          // small delay for reveal animation to trigger nicely
+          setTimeout(() => {
+            photo.classList.add('active');
+          }, 50);
+        });
+        expandGalleryBtn.textContent = 'Show Less';
+      } else {
+        extraPhotos.forEach(photo => {
+          photo.classList.add('hidden');
+          photo.classList.remove('active');
+        });
+        expandGalleryBtn.textContent = 'View All Photos';
+        // Scroll back up to the gallery start
+        document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
