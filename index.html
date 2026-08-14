@@ -333,20 +333,20 @@
           </div>
         </div>
 
-        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Booking request sent successfully!');">
+        <form id="booking-form" class="space-y-4">
           <div class="grid grid-cols-2 gap-4">
-            <input type="text" placeholder="Name" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition" />
-            <input type="tel" placeholder="Phone" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition" />
+            <input type="text" id="form-name" placeholder="Name" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition" />
+            <input type="tel" id="form-phone" placeholder="Phone" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition" />
           </div>
-          <input type="email" placeholder="Email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition" />
-          <select class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition text-white/70 appearance-none">
+          <input type="email" id="form-email" placeholder="Email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition" />
+          <select id="form-service" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition text-white/70 appearance-none">
             <option value="" disabled selected class="bg-studio-black text-white">Service Interested In</option>
             <option value="vocal" class="bg-studio-black text-white">Vocal Recording</option>
             <option value="production" class="bg-studio-black text-white">Music Production</option>
             <option value="mix" class="bg-studio-black text-white">Mix & Master</option>
             <option value="instruments" class="bg-studio-black text-white">Instrument Recording</option>
           </select>
-          <textarea rows="4" placeholder="Tell us about your project..." class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition"></textarea>
+          <textarea id="form-message" rows="4" placeholder="Tell us about your project..." class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-studio-purple transition"></textarea>
           <button type="submit" class="btn-primary w-full">Send Request</button>
         </form>
       </div>

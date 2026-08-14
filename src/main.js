@@ -238,3 +238,26 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- WhatsApp Booking Form Logic ---
+  const bookingForm = document.getElementById('booking-form');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById('form-name').value;
+      const phone = document.getElementById('form-phone').value;
+      const email = document.getElementById('form-email').value;
+      const service = document.getElementById('form-service').options[document.getElementById('form-service').selectedIndex].text;
+      const message = document.getElementById('form-message').value;
+
+      // Construct the WhatsApp message
+      const whatsappText = `*New Booking Inquiry* 🎵%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Service:* ${service}%0A*Message:* ${message}`;
+      
+      // Open WhatsApp (using the studio's phone number)
+      window.open(`https://wa.me/919958340671?text=${whatsappText}`, '_blank');
+      
+      // Optional: reset the form after sending
+      bookingForm.reset();
+    });
+  }
