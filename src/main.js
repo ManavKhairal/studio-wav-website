@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Remove from DOM after fade out
     setTimeout(() => {
       preloader.style.display = 'none';
+      
+      // Clear any anchor tags (like #contact) from the URL to prevent native browser jumping
+      if (window.location.hash) {
+        window.history.replaceState('', document.title, window.location.pathname + window.location.search);
+      }
+      // Force scroll to top one last time exactly when the page is revealed
+      window.scrollTo(0, 0);
     }, 500);
   }, 1000);
 
