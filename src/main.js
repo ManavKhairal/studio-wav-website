@@ -273,8 +273,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const promoClose = document.getElementById('promo-close');
     const promoClaimBtn = document.getElementById('promo-claim-btn');
 
-    // Show popup after 3 seconds if not shown in this session
-    if (promoPopup && !sessionStorage.getItem('promoShown')) {
+    // Show popup after 3 seconds on every page load
+    if (promoPopup) {
       setTimeout(() => {
         promoPopup.classList.remove('hidden');
         promoPopup.classList.add('flex');
@@ -285,8 +285,6 @@ document.addEventListener('DOMContentLoaded', () => {
           promoContent.classList.remove('scale-95', 'opacity-0');
           promoContent.classList.add('scale-100', 'opacity-100');
         }, 50);
-
-        sessionStorage.setItem('promoShown', 'true');
       }, 3000);
     }
 
