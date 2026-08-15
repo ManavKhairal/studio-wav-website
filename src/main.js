@@ -1,5 +1,11 @@
 import './style.css'
 
+// Force page to top on reload (prevents mobile browsers from jumping down to previous scroll positions)
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 document.addEventListener('DOMContentLoaded', () => {
   
   // --- Preloader ---
