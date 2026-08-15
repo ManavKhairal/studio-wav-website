@@ -265,3 +265,50 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // --- Marketing Popup Logic ---
+  document.addEventListener('DOMContentLoaded', () => {
+    const promoPopup = document.getElementById('promo-popup');
+    const promoContent = document.getElementById('promo-content');
+    const promoClose = document.getElementById('promo-close');
+    const promoClaimBtn = document.getElementById('promo-claim-btn');
+
+    // Show popup after 3 seconds if not shown in this session
+    if (promoPopup && !sessionStorage.getItem('promoShown')) {
+      setTimeout(() => {
+        promoPopup.classList.remove('hidden');
+        promoPopup.classList.add('flex');
+        
+        setTimeout(() => {
+          promoPopup.classList.remove('opacity-0');
+          promoPopup.classList.add('opacity-100');
+          promoContent.classList.remove('scale-95', 'opacity-0');
+          promoContent.classList.add('scale-100', 'opacity-100');
+        }, 50);
+
+        sessionStorage.setItem('promoShown', 'true');
+      }, 3000);
+    }
+
+    const closePromo = () => {
+      promoPopup.classList.remove('opacity-100');
+      promoPopup.classList.add('opacity-0');
+      promoContent.classList.remove('scale-100', 'opacity-100');
+      promoContent.classList.add('scale-95', 'opacity-0');
+      
+      setTimeout(() => {
+        promoPopup.classList.add('hidden');
+        promoPopup.classList.remove('flex');
+      }, 500);
+    };
+
+    if (promoClose) promoClose.addEventListener('click', closePromo);
+    if (promoPopup) promoPopup.addEventListener('click', (e) => {
+      if (e.target === promoPopup) closePromo();
+    });
+    if (promoClaimBtn) {
+      promoClaimBtn.addEventListener('click', () => {
+        closePromo();
+      });
+    }
+  });
