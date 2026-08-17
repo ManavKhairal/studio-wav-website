@@ -176,9 +176,12 @@
     
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
       <p class="text-studio-purple font-outfit font-bold tracking-widest uppercase mb-4 text-sm md:text-lg reveal">Studio.wav</p>
-      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black font-outfit tracking-tighter leading-tight mb-6 reveal" style="transition-delay: 100ms;">
-        THE BEST RECORDING STUDIO <br class="hidden md:block"/> IN DELHI
-      </h1>
+      <!-- Hidden H1 for SEO -->
+      <h1 class="sr-only">THE BEST RECORDING STUDIO IN DELHI</h1>
+      <!-- Visible text styled exactly like the original H1 -->
+      <div aria-hidden="true" class="text-5xl md:text-7xl lg:text-8xl font-black font-outfit tracking-tighter leading-tight mb-6 reveal" style="transition-delay: 100ms;">
+        WE ARE BEST IN <br class="hidden md:block"/> THE BUSINESS
+      </div>
       <p class="text-lg md:text-xl text-white/80 font-light mb-10 max-w-2xl mx-auto reveal" style="transition-delay: 200ms;">
         Elevate your sound at a professional recording studio in New Delhi's premier creative space. Industry-standard acoustics meets artistic vision.
       </p>
