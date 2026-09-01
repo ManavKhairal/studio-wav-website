@@ -285,6 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const promoContent = document.getElementById('promo-content');
     const promoClose = document.getElementById('promo-close');
     const promoClaimBtn = document.getElementById('promo-claim-btn');
+    const promoLaterBtn = document.getElementById('promo-later-btn');
 
     // Show popup after 3 seconds on every page load
     if (promoPopup) {
@@ -319,6 +320,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     if (promoClaimBtn) {
       promoClaimBtn.addEventListener('click', () => {
+        closePromo();
+      });
+    }
+    if (promoLaterBtn) {
+      promoLaterBtn.addEventListener('click', () => {
         closePromo();
       });
     }
