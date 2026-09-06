@@ -12,7 +12,8 @@ export default defineConfig({
         vocalRecording: resolve(__dirname, 'vocal-recording.html'),
         musicProduction: resolve(__dirname, 'music-production.html'),
         mixingMastering: resolve(__dirname, 'mixing-mastering.html'),
-        recordingStudioDelhi: resolve(__dirname, 'recording-studio-delhi.html')
+        recordingStudioDelhi: resolve(__dirname, 'recording-studio-delhi.html'),
+        review: resolve(__dirname, 'review.html')
       }
     }
   }

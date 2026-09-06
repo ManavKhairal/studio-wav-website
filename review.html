@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Leave a review for Studio.wav - Premium Music Recording Studio in Safdarjung Enclave, New Delhi." />
+  <title>Leave a Review | Studio.wav</title>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="font-sans bg-studio-black text-white relative min-h-screen flex flex-col items-center justify-center py-12 px-6">
+  
+  <a href="/" class="mb-12">
+    <img src="/Logo.png" alt="Studio.wav Logo" class="h-16 md:h-20 object-contain" />
+  </a>
+
+  <div class="max-w-2xl w-full text-center mb-10">
+    <h1 class="text-4xl md:text-5xl font-black font-outfit mb-4">Thanks for recording with us! 🎵🎤</h1>
+    <p class="text-lg text-white/80">
+      Your support means the world to us. 🌍 It would be amazing if you could leave a 5-star review on Google. ⭐
+      <br/><span class="text-studio-purple font-semibold">To make it easy, you can copy one of our suggested templates below! 👇</span>
+    </p>
+  </div>
+
+  <div class="w-full max-w-2xl flex flex-col items-center mb-12">
+    
+    <!-- Dynamic Template -->
+    <div class="bg-white/5 border border-white/10 rounded-xl p-8 relative group w-full mb-4 shadow-lg shadow-studio-purple/5">
+      <p id="dynamic-review-text" class="text-white/90 pr-24 italic text-lg leading-relaxed">
+        <!-- Text injected by JS -->
+      </p>
+      <button onclick="copyText('dynamic-review-text', this)" class="absolute top-1/2 -translate-y-1/2 right-6 bg-studio-purple hover:bg-studio-purple/80 text-white text-sm font-bold py-3 px-6 rounded-full transition-all flex items-center gap-2">
+        <i class="ph ph-copy text-lg"></i> <span>Copy</span>
+      </button>
+    </div>
+
+    <button onclick="generateReview()" class="text-white/60 hover:text-studio-purple text-sm flex items-center gap-2 transition-colors py-2 px-4 rounded-full hover:bg-white/5">
+      <i class="ph ph-arrows-clockwise text-lg"></i> Generate Another Option
+    </button>
+
+  </div>
+
+  <!-- Action Button -->
+  <a href="https://share.google/xXqwsqoa8MUWneBwc" id="google-review-btn" target="_blank" onclick="fallbackCopy()" class="btn-primary py-4 px-10 text-lg w-full max-w-sm flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(109,40,217,0.5)] animate-pulse hover:animate-none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-6 h-6">
+      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+    </svg>
+    Post on Google
+  </a>
+
+  <p class="mt-6 text-sm text-white/40">Don't forget to give us 5 stars! ⭐⭐⭐⭐⭐</p>
+
+  <script>
+    const openings = [
+      "Had an amazing session today. 🎙️",
+      "Honestly the best recording studio in New Delhi. 🚀",
+      "I recently booked a session at Studio.wav and it was incredible. ✨",
+      "Just finished tracking here. 🔥"
+    ];
+    const services = [
+      "The vocal recording quality is top-notch. 🎧",
+      "Their mixing and mastering really brought my track to life. 🎛️",
+      "The music production services are out of this world. 🎹",
+      "Got some vocals tracked and it sounds super clean. 🎶"
+    ];
+    const compliments = [
+      "The acoustic treatment is industry standard. 🔊",
+      "The audio engineers were very professional and helpful. 🙌",
+      "Great vibe and high-end gear. 🎚️",
+      "The staff really knows what they are doing to get that radio-ready sound. 📻"
+    ];
+    const closings = [
+      "Highly recommend this place to any artist in South Delhi. 💯",
+      "Will definitely be coming back for my next project! 🏆",
+      "If you need a premium recording studio, this is it. 💎",
+      "5 stars all the way. ⭐⭐⭐⭐⭐"
+    ];
+
+    function generateReview() {
+      const getRand = (arr) => arr[Math.floor(Math.random() * arr.length)];
+      const review = `${getRand(openings)} ${getRand(services)} ${getRand(compliments)} ${getRand(closings)}`;
+      document.getElementById('dynamic-review-text').innerText = `"${review}"`;
+    }
+
+    function fallbackCopy() {
+      const text = document.getElementById('dynamic-review-text').innerText.replace(/"/g, '');
+      navigator.clipboard.writeText(text).catch(e => console.log('Copy failed', e));
+    }
+
+    function copyText(elementId, btnElement) {
+      const text = document.getElementById(elementId).innerText.replace(/"/g, '');
+      navigator.clipboard.writeText(text).then(() => {
+        const originalHtml = btnElement.innerHTML;
+        btnElement.innerHTML = '<i class="ph ph-check text-lg"></i> <span>Copied!</span>';
+        btnElement.classList.replace('bg-studio-purple', 'bg-green-500');
+        btnElement.classList.replace('hover:bg-studio-purple/80', 'hover:bg-green-600');
+        
+        setTimeout(() => {
+          btnElement.innerHTML = originalHtml;
+          btnElement.classList.replace('bg-green-500', 'bg-studio-purple');
+          btnElement.classList.replace('hover:bg-green-600', 'hover:bg-studio-purple/80');
+        }, 2000);
+      });
+    }
+
+    // Generate initial review on page load
+    generateReview();
+  </script>
+</body>
+</html>
