@@ -92,9 +92,34 @@
       "5 stars all the way. ⭐⭐⭐⭐⭐"
     ];
 
+    const shortReviews = [
+      "Great studio, highly recommended.",
+      "Best recording experience in Delhi.",
+      "The audio quality is fantastic.",
+      "Super professional and helpful engineers.",
+      "Loved the vibe, will definitely be back.",
+      "Top notch mixing and mastering.",
+      "Industry standard acoustic treatment.",
+      "Amazing vocal recording session.",
+      "Really brought my track to life.",
+      "Clean sounding vocal booth.",
+      "Five stars. Awesome gear and staff.",
+      "Great atmosphere for getting creative work done."
+    ];
+
     function generateReview() {
       const getRand = (arr) => arr[Math.floor(Math.random() * arr.length)];
-      const review = `${getRand(openings)} ${getRand(services)} ${getRand(compliments)} ${getRand(closings)}`;
+      
+      // 1 out of 5 chance (20%) to generate a long review
+      const isLong = Math.random() < 0.2;
+      
+      let review = "";
+      if (isLong) {
+        review = `${getRand(openings)} ${getRand(services)} ${getRand(compliments)} ${getRand(closings)}`;
+      } else {
+        review = getRand(shortReviews);
+      }
+      
       document.getElementById('dynamic-review-text').innerText = `"${review}"`;
     }
 
