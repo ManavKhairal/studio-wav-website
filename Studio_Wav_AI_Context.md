@@ -11,8 +11,8 @@
 - **Tone of Voice:** Punchy, confident, premium, and direct. Use emojis sparingly but effectively (e.g., 🎙️, 🔥, 🎵).
 
 ## 2. Contact & Location Information
-- **Phone / WhatsApp:** 9958340671
-- **Email:** rajneeshrana303@gmail.com
+- **Phone / WhatsApp:** 7011601140
+- **Email:** Studiowav.in@gmail.com
 - **Instagram Handle:** @studio.wav_
 - **Instagram Link:** https://www.instagram.com/studio.wav_?igsh=MXMyY3p0ajQxYmM2eg==
 - **Address:** Second floor, 75/3, Street No. 3, Krishna Nagar, Safdarjung Enclave, New Delhi, Delhi 110029

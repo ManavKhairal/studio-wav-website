@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const encodedText = encodeURIComponent(whatsappText);
 
         // Open WhatsApp (using the studio's phone number)
-        window.location.href = `https://wa.me/919958340671?text=${encodedText}`;
+        window.location.href = `https://wa.me/917011601140?text=${encodedText}`;
 
         // Optional: reset the form after sending
         bookingForm.reset();
